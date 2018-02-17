@@ -6,7 +6,7 @@
   "author": "Bodo Tasche",
   "license": "Apache-2.0",
   "dependencies": {
-    "cheerio": "^0.22.0",
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
     "npm-watch": "^0.3.0",
     "request": "^2.83.0"
