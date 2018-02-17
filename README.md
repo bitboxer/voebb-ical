@@ -11,4 +11,4 @@ do that for free with just a few clicks.
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/bitboxer/voebb-ical)
 
 After you deployed it and configured the correct voebb credentials, you can add the feed to your calender using the following
-url: `http://[YOURAPPNAME].herokuapp.com/ical`. 
+url: `http://[YOURAPPNAME].herokuapp.com/ical/[YOURSECURITYTOKEN]`. The app name and the security token are defined during the installation using the heroku button above.
