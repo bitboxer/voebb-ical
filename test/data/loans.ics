@@ -1,0 +1,53 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Vöbb Kalender
+METHOD:PUBLISH
+PRODID:node-ical-toolkit
+
+BEGIN:VEVENT
+UID:fc07df6f
+DTSTAMP:20180221T064626Z
+DTSTART;VALUE=DATE:20180227
+DTEND;VALUE=DATE:20180227
+SUMMARY:Due soon: Geisel : [Comic] / Guy Delisle \; [aus dem Französischem von Heike Drescher \; Textbearbeitung: Ulrich Pröfrock]\nComic Deli\n03825165458
+SEQUENCE:0
+LOCATION:Friedrichshain - Kreuzberg: Bibliothek Frankfurter Allee 14a
+DESCRIPTION:This book is due on 2018-03-03
+END:VEVENT
+
+
+BEGIN:VEVENT
+UID:e2e0d401
+DTSTAMP:20180221T064626Z
+DTSTART;VALUE=DATE:20180302
+DTEND;VALUE=DATE:20180302
+SUMMARY:Geisel : [Comic] / Guy Delisle \; [aus dem Französischem von Heike Drescher \; Textbearbeitung: Ulrich Pröfrock]\nComic Deli\n03825165458
+SEQUENCE:0
+LOCATION:Friedrichshain - Kreuzberg: Bibliothek Frankfurter Allee 14a
+END:VEVENT
+
+
+BEGIN:VEVENT
+UID:aa53e393
+DTSTAMP:20180221T064626Z
+DTSTART;VALUE=DATE:20180227
+DTEND;VALUE=DATE:20180227
+SUMMARY:Due soon: Aufzeichnungen aus Birma : [Comic] / Guy Delisle. [Aus dem Franz. von Kai Wilksen]\nComic Deli\n02184346458
+SEQUENCE:0
+LOCATION:Friedrichshain - Kreuzberg: Bibliothek Frankfurter Allee 14a
+DESCRIPTION:This book is due on 2018-03-03
+END:VEVENT
+
+
+BEGIN:VEVENT
+UID:33f1a914
+DTSTAMP:20180221T064626Z
+DTSTART;VALUE=DATE:20180302
+DTEND;VALUE=DATE:20180302
+SUMMARY:Aufzeichnungen aus Birma : [Comic] / Guy Delisle. [Aus dem Franz. von Kai Wilksen]\nComic Deli\n02184346458
+SEQUENCE:0
+LOCATION:Friedrichshain - Kreuzberg: Bibliothek Frankfurter Allee 14a
+END:VEVENT
+
+END:VCALENDAR

@@ -8,6 +8,8 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
+    "ical-toolkit": "^1.0.9",
+    "moment": "^2.20.1",
     "npm-watch": "^0.3.0",
     "request": "^2.83.0"
   },

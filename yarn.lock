@@ -868,6 +868,10 @@ commander@2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
+commander@~2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.6.0.tgz#9df7e52fb2a0cb0fb89058ee80c3104225f37e1d"
+
 component-emitter@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
@@ -1568,6 +1572,18 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
+ical-toolkit@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/ical-toolkit/-/ical-toolkit-1.0.9.tgz#4a15eb93c99ee23b636568add61a635d0590794e"
+  dependencies:
+    ical2json "^0.2.0"
+
+ical2json@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ical2json/-/ical2json-0.2.0.tgz#66408108b73a51b542244c9eed37e645759fe63a"
+  dependencies:
+    commander "~2.6.0"
+
 iconv-lite@0.4.19:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
@@ -2003,6 +2019,10 @@ mocha@5.0.1:
     he "1.1.1"
     mkdirp "0.5.1"
     supports-color "4.4.0"
+
+moment@^2.20.1:
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
 
 ms@2.0.0:
   version "2.0.0"
