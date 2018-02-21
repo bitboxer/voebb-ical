@@ -4,7 +4,7 @@ import moment from 'moment';
 export default function(books) {
   let builder = icalToolkit.createIcsFileBuilder();
 
-  builder.calname = 'Vöbb Kalender';
+  builder.calname = 'Vöbb calender';
 
   for (let book of books) {
     let dueSoonDate = moment(book.date).subtract(3, 'days').toDate();
