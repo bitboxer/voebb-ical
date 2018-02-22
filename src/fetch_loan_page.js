@@ -1,23 +1,24 @@
 import fetchCookie from 'fetch-cookie/node-fetch';
 import f from 'node-fetch';
-let fetch = fetchCookie(f);
+const fetch = fetchCookie(f);
+
+require('babel-polyfill');
 
 function loadUrl(url, cookie) {
-  let setCookie = cookie;
-
-  fetch('https://www.voebb.de/', {})
-    .then(response => {
-      setCookie = response.headers['set-cookie'];
-      return response.text();
-    }).then(body => {
-      console.log(body);
-    }).catch(error => {
-      console.log(error);
-    });
-
-  console.log(setCookie);
+  return (async function () {
+    try {
+      const res = await fetch(url, { cookie: cookie });
+      const setCookie = res.headers.get('set-cookie');
+      const body = await res.text();
+      return { cookie: setCookie, body: body };
+    } catch (e) {
+      console.log(e);
+    }
+  })();
 }
 
 export default function(username, password) {
-  loadUrl("https://www.voebb.de", "old");
+  loadUrl('https://www.voebb.de', '').then(result => {
+    console.log(result.body);
+  });
 }
