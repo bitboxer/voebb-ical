@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+import cheerio from 'cheerio';
 import fetchCookie from 'fetch-cookie/node-fetch';
 import f from 'node-fetch';
 const fetch = fetchCookie(f);
@@ -11,13 +12,36 @@ function loadUrl(url, cookie) {
       const body = await res.text();
       return { cookie: setCookie, body: body };
     } catch (e) {
-      console.log(e);
+      return { cookie: "", body: "" };
     }
   })();
 }
 
+function loadLandingPage() {
+  return loadUrl('https://www.voebb.de', '')
+}
+
+function loadLoginPage(result) {
+  const page = cheerio.load(result.body);
+  const link = page("#unav ul li a")[0];
+  const href = cheerio(link).attr("href");
+  return loadUrl(`https://www.voebb.de/${href}`, result.cookie);
+}
+
+function login(result, username, password) {
+  console.log(result.body);
+  //return loadUrl('https://www.voebb.de', result.cookie)
+}
+
 export default function(username, password) {
-  loadUrl('https://www.voebb.de', '').then(result => {
-    console.log(result.body);
-  });
+  loadLandingPage()
+    .then(loadLoginPage).then(result => {
+      return login(result, username, password)
+    })
+    //.then(pressOkayButton)
+    //.then(openMyAccount)
+    //.then(getLoanPage)
+    //.then(result => {
+      //console.log(result.body);
+    //});
 }
