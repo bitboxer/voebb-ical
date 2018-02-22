@@ -1,8 +1,7 @@
+import 'babel-polyfill';
 import fetchCookie from 'fetch-cookie/node-fetch';
 import f from 'node-fetch';
 const fetch = fetchCookie(f);
-
-require('babel-polyfill');
 
 function loadUrl(url, cookie) {
   return (async function () {
