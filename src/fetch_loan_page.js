@@ -84,9 +84,8 @@ function getLoanPage(result) {
 
 export default function(username, password) {
   loadLandingPage()
-    .then(loadLoginPage).then(result => {
-      return login(result, username, password)
-    })
+    .then(loadLoginPage)
+    .then(result => login(result, username, password))
     .then(pressOkayButton)
     .then(openMyAccount)
     .then(getLoanPage)
