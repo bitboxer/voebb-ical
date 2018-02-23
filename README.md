@@ -25,7 +25,7 @@ to get the generated token.
 To run the server locally you need to install node, npm and yarn. After
 that follow these steps:
 
-```
+```shell
 yarn
 export VOEBB_ID=#USER_ID#
 export VOEBB_PASSWORD=#PASSWORD#
