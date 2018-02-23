@@ -83,13 +83,15 @@ function getLoanPage(result) {
 }
 
 export default function(username, password) {
-  loadLandingPage()
+  return loadLandingPage()
     .then(loadLoginPage)
     .then(result => login(result, username, password))
     .then(pressOkayButton)
     .then(openMyAccount)
     .then(getLoanPage)
     .then(result => {
-      console.log(result.body);
+      return new Promise(function(resolve, reject) {
+        resolve(result.body);
+      });
     });
 }
