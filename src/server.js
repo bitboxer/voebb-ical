@@ -23,4 +23,4 @@ router.get(`/feed/${process.env.VOEBB_TOKEN}`, async (ctx, next) => {
 
 app
   .use(router.routes())
-  .listen(4000);
+  .listen(process.env.PORT || 4000);
