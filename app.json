@@ -6,15 +6,18 @@
   "env": {
     "VOEBB_TOKEN": {
       "description": "The token for the ical feed url",
-      "generator": "secret"
+      "generator": "secret",
+      "required": true
     },
     "VOEBB_ID": {
       "description": "The id of your library card",
       "value": ""
+      "required": true
     },
     "VOEBB_PASSWORD": {
       "description": "Your password",
-      "value": ""
+      "value": "",
+      "required": true
     }
   },
 }
