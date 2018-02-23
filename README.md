@@ -19,9 +19,8 @@ above.
 
 # Run locally
 
-To run the server locally you need to follow these steps:
-
-* Install node, npm and yarn
+To run the server locally you need to install node, npm and yarn. After
+that follow these steps:
 
 ```
 yarn
@@ -30,3 +29,6 @@ export VOEBB_PASSWORD=#PASSWORD#
 export VOEBB_TOKEN=#TOKEN_FOR_URL#
 npm start
 ```
+
+The `USER_ID` is the number on your library card, `PASSWORD` your password and
+the `TOKEN_FOR_URL` is used to create a secure URL that can't be guessed.
