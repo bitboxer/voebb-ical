@@ -33,3 +33,9 @@ npm start
 
 The `USER_ID` is the number on your library card, `PASSWORD` your password and
 the `TOKEN_FOR_URL` is used to create a secure URL that can't be guessed.
+
+After you started it, you can get the ical feed with
+
+```shell
+curl localhost:4000/feed/#TOKEN_FOR_URL#
+```
