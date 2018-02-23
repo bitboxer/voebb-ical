@@ -82,6 +82,12 @@ function getLoanPage(result) {
   return loadUrl(`https://www.voebb.de/${href}`, result.cookie);
 }
 
+function fetchBody(result) {
+  return new Promise(function(resolve, reject) {
+    resolve(result.body);
+  });
+}
+
 export default function(username, password) {
   return loadLandingPage()
     .then(loadLoginPage)
@@ -89,9 +95,5 @@ export default function(username, password) {
     .then(pressOkayButton)
     .then(openMyAccount)
     .then(getLoanPage)
-    .then(result => {
-      return new Promise(function(resolve, reject) {
-        resolve(result.body);
-      });
-    });
+    .then(fetchBody);
 }
