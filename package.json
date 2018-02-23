@@ -12,8 +12,10 @@
     "fetch-cookie": "^0.7.0",
     "form-data": "^2.3.2",
     "ical-toolkit": "^1.0.9",
+    "koa": "^2.5.0",
     "moment": "^2.20.1",
     "node-fetch": "^2.0.0",
+    "nodemon": "^1.15.1",
     "npm-watch": "^0.3.0"
   },
   "devDependencies": {
@@ -25,7 +27,8 @@
   },
   "scripts": {
     "test": "node_modules/.bin/mocha --require babel-register --reporter spec",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "server": "node_modules/nodemon/bin/nodemon.js src/server.js"
   },
   "watch": {
     "test": "{src,test}/*.js"
