@@ -11,7 +11,7 @@
     },
     "VOEBB_ID": {
       "description": "The id of your library card",
-      "value": ""
+      "value": "",
       "required": true
     },
     "VOEBB_PASSWORD": {
@@ -19,5 +19,5 @@
       "value": "",
       "required": true
     }
-  },
+  }
 }
