@@ -16,3 +16,17 @@ the feed to your calender using the following url:
 `http://[YOURAPPNAME].herokuapp.com/ical/[YOURSECURITYTOKEN]`. The app name and
 the security token are defined during the installation using the heroku button
 above.
+
+# Run locally
+
+To run the server locally you need to follow these steps:
+
+* Install node, npm and yarn
+
+```
+yarn
+export VOEBB_ID=#USER_ID#
+export VOEBB_PASSWORD=#PASSWORD#
+export VOEBB_TOKEN=#TOKEN_FOR_URL#
+npm start
+```

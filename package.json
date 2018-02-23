@@ -13,6 +13,7 @@
     "form-data": "^2.3.2",
     "ical-toolkit": "^1.0.9",
     "koa": "^2.5.0",
+    "koa-router": "^7.4.0",
     "moment": "^2.20.1",
     "node-fetch": "^2.0.0",
     "nodemon": "^1.15.1",

@@ -7,7 +7,7 @@ function fixBookTitle(title) {
 
 function parseDate(date) {
   let parts = date.match(/(\d+)/g);
-  return new Date(parts[2], parts[1]-1, parts[0]);
+  return new Date(Date.UTC(parts[2], parts[1]-1, parts[0]));
 }
 
 export default function(html) {
