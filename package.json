@@ -28,7 +28,7 @@
   "scripts": {
     "test": "node_modules/.bin/mocha --require babel-register --reporter spec",
     "watch": "npm-watch",
-    "server": "node_modules/nodemon/bin/nodemon.js src/server.js"
+    "start": "node_modules/nodemon/bin/nodemon.js app.js"
   },
   "watch": {
     "test": "{src,test}/*.js"
