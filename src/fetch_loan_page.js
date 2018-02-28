@@ -3,9 +3,9 @@ import cheerio from 'cheerio';
 import FormData from 'form-data';
 import fetchCookie from 'fetch-cookie/node-fetch';
 import f from 'node-fetch';
-const fetch = fetchCookie(f);
+const fetchWithCookie = fetchCookie(f);
 
-function loadUrl(url, cookie) {
+function loadUrl(fetch, url, cookie) {
   return (async function () {
     try {
       const res = await fetch(url, { cookie: cookie });
@@ -18,7 +18,7 @@ function loadUrl(url, cookie) {
   })();
 }
 
-function postForm(url, cookie, form) {
+function postForm(fetch, url, cookie, form) {
   return (async function () {
     try {
       const res = await fetch(url, { cookie: cookie, method: 'POST', body: form });
@@ -44,42 +44,42 @@ function extractFormData(body) {
   return {form: form, path: path}
 }
 
-function loadLandingPage() {
-  return loadUrl('https://www.voebb.de', '')
+function loadLandingPage(fetch) {
+  return loadUrl(fetch, 'https://www.voebb.de', '')
 }
 
-function loadLoginPage(result) {
+function loadLoginPage(fetch, result) {
   const page = cheerio.load(result.body);
   const link = page("#unav ul li a")[0];
   const href = cheerio(link).attr("href");
-  return loadUrl(`https://www.voebb.de/${href}`, result.cookie);
+  return loadUrl(fetch, `https://www.voebb.de/${href}`, result.cookie);
 }
 
-function login(result, username, password) {
+function login(fetch, result, username, password) {
   const formdata = extractFormData(result.body);
   const form = formdata.form;
   form.append("$Textfield", username);
   form.append("$Textfield$0", password);
-  return postForm(`https://www.voebb.de${formdata.path}`, result.cookie, form);
+  return postForm(fetch, `https://www.voebb.de${formdata.path}`, result.cookie, form);
 }
 
-function pressOkayButton(result) {
+function pressOkayButton(fetch, result) {
   const formdata = extractFormData(result.body);
-  return postForm(`https://www.voebb.de${formdata.path}`, result.cookie, formdata.form);
+  return postForm(fetch, `https://www.voebb.de${formdata.path}`, result.cookie, formdata.form);
 }
 
-function openMyAccount(result) {
+function openMyAccount(fetch, result) {
   const page = cheerio.load(result.body);
   const link = page("#unav ul li a")[2];
   const href = cheerio(link).attr("href");
-  return loadUrl(`https://www.voebb.de/${href}`, result.cookie);
+  return loadUrl(fetch, `https://www.voebb.de/${href}`, result.cookie);
 }
 
-function getLoanPage(result) {
+function getLoanPage(fetch, result) {
   const page = cheerio.load(result.body);
   const link = page("a[fld='RGLINK_1']")[0];
   const href = cheerio(link).attr("href");
-  return loadUrl(`https://www.voebb.de/${href}`, result.cookie);
+  return loadUrl(fetch, `https://www.voebb.de/${href}`, result.cookie);
 }
 
 function fetchBody(result) {
@@ -88,12 +88,13 @@ function fetchBody(result) {
   });
 }
 
-export default function(username, password) {
-  return loadLandingPage()
-    .then(loadLoginPage)
-    .then(result => login(result, username, password))
-    .then(pressOkayButton)
-    .then(openMyAccount)
-    .then(getLoanPage)
-    .then(fetchBody);
+export default function(username, password, fetchInstance) {
+  let fetcher = fetchInstance || fetchWithCookie;
+  return loadLandingPage(fetcher)
+    .then(result => loadLoginPage(fetcher, result))
+    .then(result => login(fetcher, result, username, password))
+    .then(result => pressOkayButton(fetcher, result))
+    .then(result => openMyAccount(fetcher, result))
+    .then(result => getLoanPage(fetcher, result))
+    .then(result => fetchBody(result));
 }
