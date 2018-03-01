@@ -13,12 +13,16 @@ router.get('/', (ctx, next) => {
 });
 
 router.get(`/feed/${process.env.VOEBB_TOKEN}`, async (ctx, next) => {
-  const loanPage = await fetchLoanPage(process.env.VOEBB_ID, process.env.VOEBB_PASSWORD);
-  const books = loanPageParser(loanPage);
-  const ics = ical(books);
+  try {
+    const loanPage = await fetchLoanPage(process.env.VOEBB_ID || "", process.env.VOEBB_PASSWORD || "");
+    const books = loanPageParser(loanPage);
+    const ics = ical(books);
 
-  ctx.type = "text/calendar";
-  ctx.body = ics;
+    ctx.type = "text/calendar";
+    ctx.body = ics;
+  } catch(e) {
+    ctx.body = `Error: ${e}`;
+  }
 }); 
 
 app
