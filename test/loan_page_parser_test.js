@@ -20,7 +20,9 @@ describe('LoanPageParser', () => {
     ]);
   });
 
-  xit('should return an empty list if the html is empty', () => {
+  it('should return an empty list if the html is empty', () => {
+    let result = loanPageParser("");
+    expect(result).to.eql([]);
   });
 
   xit('should return an empty list if the table is empty', () => {
