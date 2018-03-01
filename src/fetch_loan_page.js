@@ -65,7 +65,14 @@ function login(fetch, result, username, password) {
 
 function pressOkayButton(fetch, result) {
   const formdata = extractFormData(result.body);
-  return postForm(fetch, `https://www.voebb.de${formdata.path}`, result.cookie, formdata.form);
+
+  if (result.body.includes("Sie sind angemeldet. Achtung: Vergessen")) {
+    return postForm(fetch, `https://www.voebb.de${formdata.path}`, result.cookie, formdata.form);
+  } else {
+    return new Promise(function(resolve, reject) {
+      reject("Login failed. Please check username and password.");
+    });
+  }
 }
 
 function openMyAccount(fetch, result) {

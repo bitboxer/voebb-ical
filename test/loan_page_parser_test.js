@@ -20,4 +20,10 @@ describe('LoanPageParser', () => {
     ]);
   });
 
+  xit('should return an empty list if the html is empty', () => {
+  });
+
+  xit('should return an empty list if the table is empty', () => {
+  });
+
 });
