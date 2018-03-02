@@ -1,6 +1,6 @@
 export default class FetchMock {
   constructor() {
-    this.results = []
+    this.results = [];
   }
 
   addPage(page) {
@@ -8,20 +8,20 @@ export default class FetchMock {
   }
 
   fetch(url, opts) {
-    let self = this;
-    return new Promise(function(resolve, reject) {
+    const self = this;
+    return new Promise(((resolve, reject) => {
       resolve({
         headers: {
-          get: function(param) {
+          get(param) {
             return 'none';
-          }
+          },
         },
-        text: function() {
-          return new Promise(function(resolve, reject) {
+        text() {
+          return new Promise(((resolve, reject) => {
             resolve(self.results.shift());
-          });
-        }
+          }));
+        },
       });
-    });
+    }));
   }
 }
