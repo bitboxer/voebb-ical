@@ -1,21 +1,21 @@
 import icalToolkit from 'ical-toolkit';
 import moment from 'moment';
 
-export default function(books) {
-  let builder = icalToolkit.createIcsFileBuilder();
+export default function (books) {
+  const builder = icalToolkit.createIcsFileBuilder();
 
   builder.calname = 'Vöbb calender';
 
-  for (let book of books) {
-    let dueSoonDate = moment(book.date).subtract(3, 'days').toDate();
+  for (const book of books) {
+    const dueSoonDate = moment(book.date).subtract(3, 'days').toDate();
 
     builder.events.push({
       start: dueSoonDate,
       end: dueSoonDate,
       allDay: true,
       summary: `Due soon: ${book.book}`,
-      description: `This book is due on ${moment(book.date).format("YYYY-MM-DD")}`,
-      location: book.location
+      description: `This book is due on ${moment(book.date).format('YYYY-MM-DD')}`,
+      location: book.location,
     });
 
     builder.events.push({
@@ -23,7 +23,7 @@ export default function(books) {
       end: book.date,
       allDay: true,
       summary: book.book,
-      location: book.location
+      location: book.location,
     });
   }
 
