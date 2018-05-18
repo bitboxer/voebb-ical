@@ -1,6 +1,6 @@
 # voebb-ical
 
-[![Build Status](https://travis-ci.org/bitboxer/voebb-ical.svg?branch=master)](https://travis-ci.org/bitboxer/voebb-ical)
+[![Build Status](https://travis-ci.com/bitboxer/voebb-ical.svg?branch=master)](https://travis-ci.com/bitboxer/voebb-ical)
 
 This project makes it possible to have an ical feed for your loans in the
 Berlin Library. Never again forget to return a book on time. The ical feed will
