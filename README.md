@@ -30,7 +30,7 @@ yarn
 export VOEBB_ID=#USER_ID#
 export VOEBB_PASSWORD=#PASSWORD#
 export VOEBB_TOKEN=#TOKEN_FOR_URL#
-npm start
+yarn start
 ```
 
 The `USER_ID` is the number on your library card, `PASSWORD` your password and
