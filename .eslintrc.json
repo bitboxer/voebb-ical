@@ -1,13 +1,29 @@
 {
   "root": true,
   "extends": "airbnb",
-  "env": { "mocha": true },
+  "env": {
+    "mocha": true
+  },
   "rules": {
-    "jsx-a11y/anchor-is-valid": ["error", {
-      "specialLink": ["to"]
-    }],
-    "jsx-a11y/label-has-for": ["error", {
-      "required": { "some": ["nesting", "id"] }
-    }]
+    "no-restricted-syntax": 0,
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "specialLink": [
+          "to"
+        ]
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": [
+            "nesting",
+            "id"
+          ]
+        }
+      }
+    ]
   }
 }
