@@ -1,7 +1,7 @@
 import icalToolkit from 'ical-toolkit';
 import moment from 'moment';
 
-export default function (books) {
+export default function ical(books) {
   const builder = icalToolkit.createIcsFileBuilder();
 
   builder.calname = 'Vöbb calender';

@@ -10,7 +10,7 @@ function parseDate(date) {
   return new Date(Date.UTC(parts[2], parts[1] - 1, parts[0]));
 }
 
-export default function (html) {
+export default function loanPageParse(html) {
   const page = cheerio.load(html);
 
   const rows = page('.rTable_table tbody').find('tr');

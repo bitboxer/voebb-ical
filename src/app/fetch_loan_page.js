@@ -81,7 +81,7 @@ function fetchBody(result) {
   });
 }
 
-export default function (username, password, fetchInstance) {
+export default function fetchLoanPage(username, password, fetchInstance) {
   const fetcher = fetchInstance || fetchWithCookie;
   return loadLandingPage(fetcher)
     .then((result) => loadLoginPage(fetcher, result))
