@@ -3,6 +3,7 @@
   "description": "A ical feed for the VÖBB library",
   "repository": "https://github.com/bitboxer/voebb-ical",
   "keywords": ["voebb", "vöbb", "ical"],
+  "stack": "heroku-20",
   "env": {
     "VOEBB_TOKEN": {
       "description": "The token for the ical feed url",
