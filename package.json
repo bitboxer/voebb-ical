@@ -9,7 +9,7 @@
     "lint": "eslint 'src/**/*.{js,jsx}'"
   },
   "dependencies": {
-    "@babel/cli": "^7.14.3",
+    "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.3",
     "@babel/node": "^7.14.2",
     "@babel/polyfill": "7.12.1",
