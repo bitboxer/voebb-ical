@@ -2448,10 +2448,10 @@ fast-levenshtein@^2.0.6:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fetch-cookie@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/fetch-cookie/-/fetch-cookie-0.11.0.tgz#e046d2abadd0ded5804ce7e2cae06d4331c15407"
-  integrity sha512-BQm7iZLFhMWFy5CZ/162sAGjBfdNWb7a8LEqqnzsHFhxT/X/SVj/z2t2nu3aJvjlbQkrAlTUApplPRjWyH4mhA==
+fetch-cookie@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/fetch-cookie/-/fetch-cookie-1.0.0.tgz#77541b67821ea7c8cfa9bfd4b59e16bc5f7c69df"
+  integrity sha512-SWcAhkDe4yVBFtwRqJNmot6k1XjjzI7tw3aRHepxXrK6FQp6obBhqcnsdm2aNUzrtE71607crNAYodtKMq3TjA==
   dependencies:
     tough-cookie "^2.3.3 || ^3.0.1 || ^4.0.0"
 
