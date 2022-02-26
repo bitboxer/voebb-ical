@@ -14,7 +14,7 @@
     "@babel/node": "^7.16.8",
     "@babel/polyfill": "7.12.1",
     "@babel/preset-env": "^7.16.11",
-    "@babel/register": "7.16.9",
+    "@babel/register": "7.17.0",
     "bigint-hash": "^0.2.2",
     "cheerio": "1.0.0-rc.10",
     "cookie-parser": "^1.4.6",
@@ -31,7 +31,7 @@
     "nodemon": "^2.0.15"
   },
   "devDependencies": {
-    "chai": "4.3.4",
+    "chai": "4.3.6",
     "chai-as-promised": "^7.1.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "18.2.1",
