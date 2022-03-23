@@ -24,7 +24,7 @@
     "fetch-cookie": "^1.0.0",
     "form-data": "^4.0.0",
     "ical-toolkit": "^1.0.9",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "moment": "^2.29.1",
     "morgan": "~1.10.0",
     "node-fetch": "^2.6.1",
