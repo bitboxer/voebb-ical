@@ -2347,12 +2347,13 @@ fast-levenshtein@^2.0.6:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fetch-cookie@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/fetch-cookie/-/fetch-cookie-1.0.0.tgz#77541b67821ea7c8cfa9bfd4b59e16bc5f7c69df"
-  integrity sha512-SWcAhkDe4yVBFtwRqJNmot6k1XjjzI7tw3aRHepxXrK6FQp6obBhqcnsdm2aNUzrtE71607crNAYodtKMq3TjA==
+fetch-cookie@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/fetch-cookie/-/fetch-cookie-2.0.4.tgz#0adc20b9af632f15852ec53f1e4ed616c3ce5995"
+  integrity sha512-cozNAT9Kky2dEKFEvHsxVVzVv9oo/FAYixdmADGSFozeoEuUcEEZNl9m8iNwWEPl9dZz4IRamC2fZHzvRMyt+g==
   dependencies:
-    tough-cookie "^2.3.3 || ^3.0.1 || ^4.0.0"
+    set-cookie-parser "^2.4.8"
+    tough-cookie "^4.0.0"
 
 file-entry-cache@^6.0.1:
   version "6.0.1"
@@ -3968,6 +3969,11 @@ serve-static@1.15.0:
     parseurl "~1.3.3"
     send "0.18.0"
 
+set-cookie-parser@^2.4.8:
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/set-cookie-parser/-/set-cookie-parser-2.4.8.tgz#d0da0ed388bc8f24e706a391f9c9e252a13c58b2"
+  integrity sha512-edRH8mBKEWNVIVMKejNnuJxleqYE/ZSdcT8/Nem9/mmosx12pctd80s2Oy00KNZzrogMZS5mauK2/ymL1bvlvg==
+
 setprototypeof@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.2.0.tgz#66c9a24a73f9fc28cbe66b09fed3d33dcaf1b424"
@@ -4238,7 +4244,7 @@ touch@^3.1.0:
   dependencies:
     nopt "~1.0.10"
 
-"tough-cookie@^2.3.3 || ^3.0.1 || ^4.0.0":
+tough-cookie@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-4.0.0.tgz#d822234eeca882f991f0f908824ad2622ddbece4"
   integrity sha512-tHdtEpQCMrc1YLrMaqXXcj6AxhYi/xgit6mZu1+EDWUn+qhUf8wMQoFIy9NXuq23zAwtcB0t/MjACGR18pcRbg==
