@@ -27,7 +27,7 @@
     "minimist": "^1.2.6",
     "moment": "^2.29.3",
     "morgan": "~1.10.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.2.6",
     "nodemon": "^2.0.16"
   },
   "devDependencies": {
